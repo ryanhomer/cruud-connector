@@ -1,0 +1,9 @@
+{
+  "name": "cruud-connector",
+  "version": "1.0.0",
+  "description": "Easily build a layered CRUD frontend connector",
+  "main": "index.js",
+  "author": "Ryan Homer",
+  "license": "MIT",
+  "private": true
+}
