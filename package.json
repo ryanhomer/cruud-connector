@@ -9,6 +9,10 @@
     "typedoc": "^0.20.28",
     "typescript": "^4.1.5"
   },
+  "files": [
+    "package.json",
+    "dist"
+  ],
   "license": "MIT",
   "main": "dist/index.js",
   "name": "@techrah/cruud-connector",
