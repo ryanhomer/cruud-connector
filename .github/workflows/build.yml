@@ -16,8 +16,13 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
 
+      - run: git config --global init.defaultBranch master
+
       - name: Check code out
         uses: actions/checkout@v1
 
       - name: Install JS dependencies and build
-        run: yarn && yarn build
+        run: yarn
+
+      - name: Build package
+        run: yarn build
