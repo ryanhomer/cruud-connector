@@ -28,4 +28,4 @@ jobs:
         run: yarn test --coverage
 
       - name: Build package
-        run: yarn build --no-emit
+        run: yarn build --noEmit
