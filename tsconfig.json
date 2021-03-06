@@ -1,10 +1,21 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "strict": true,
+    "declaration": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["dom", "es2019"],
+    "module": "commonjs",
+    "outDir": "dist",
+    "rootDir": "src",
+    "skipLibCheck": false,
+    "strict": true,
+    "target": "es5"
+  },
+  "exclude": ["dist", "node_modules", "*.ts", "**/*.test.*"],
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "hideGenerator": true,
+    "includeVersion": true,
+    "out": "docs"
   }
 }
