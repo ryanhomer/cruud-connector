@@ -1,9 +1,10 @@
-name: build
+name: build-and-test
 
 on:
   push:
     branches:
-      - "**" # matches every branch
+      # - "**" # matches every branch
+      - "build"
       - "!master" # excludes master
 
 jobs:
@@ -24,8 +25,8 @@ jobs:
       - name: Install JS dependencies
         run: yarn --frozen-lockfile
 
-      - name: Run tests
-        run: yarn test --coverage
-
       - name: Build package
         run: yarn build --noEmit
+
+      - name: Run tests
+        run: yarn test --coverage
