@@ -1,4 +1,4 @@
-name: build
+name: release
 
 on:
   push:
@@ -15,17 +15,17 @@ jobs:
         with:
           node-version: 12.x
           registry-url: https://registry.npmjs.org/
-
       - run: git config --global init.defaultBranch master
-
       - name: Check code out
         uses: actions/checkout@v2
-
       - name: Install JS dependencies
         run: yarn --frozen-lockfile
-
       - name: Run tests
         run: yarn test --coverage
-
       - name: Build package
-        run: yarn build --noEmit
+        run: yarn build
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: dist
