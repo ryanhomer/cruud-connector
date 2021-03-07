@@ -28,7 +28,7 @@ jobs:
         run: |
           yarn --frozen-lockfile
           yarn build
-          yarn test
+          yarn testcov
 
       - name: Automated Version Bump
         uses: "phips28/gh-action-bump-version@v8.1.0"
