@@ -25,7 +25,8 @@
     "build": "tsc",
     "build:docs": "typedoc",
     "publish:docs": "gh-pages -d docs",
-    "test": "jest"
+    "test": "jest",
+    "testcov": "jest --coverage && codecov"
   },
   "types": "dist/index.d.ts",
   "version": "1.0.4"
