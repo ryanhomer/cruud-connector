@@ -2636,3 +2636,4 @@ input[type=checkbox]:checked + .tsd-widget:before {
 img {
   max-width: 100%;
 }
+footer { display: none }
