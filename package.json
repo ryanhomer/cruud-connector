@@ -17,7 +17,6 @@
   "license": "MIT",
   "main": "dist/index.js",
   "name": "@techrah/cruud-connector",
-  "private": true,
   "scripts": {
     "build": "tsc",
     "build:docs": "typedoc",
