@@ -25,8 +25,25 @@ jobs:
           git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Install JS dependencies
-        run: yarn --frozen-lockfile
+
+      - name: Install JS dependencies, build and test
+        run: |
+          yarn --frozen-lockfile
+          yarn build
+          yarn test
+
+      - name: Automated Version Bump
+        uses: "phips28/gh-action-bump-version@v8.1.0"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Rebuild package and publish
+        run: |
+          yarn build
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Build and publish docs
         run: |
           yarn build:docs
