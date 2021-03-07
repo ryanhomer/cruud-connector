@@ -15,19 +15,16 @@ jobs:
         with:
           node-version: 12.x
           registry-url: https://registry.npmjs.org/
-      - name: Check code out
-        uses: actions/checkout@v2
+
+      - uses: actions/checkout@v2
+      - uses: fregante/setup-git-user@v1
+
       - name: Set up git
         run: |
           git config --global init.defaultBranch master
-          git config --global user.email $GIT_EMAIL
-          git config --global user.name $GIT_USER
-          git remote set-url origin https://$GIT_USER:$GITHUB_TOKEN@github.com/$GIT_USER/$GIT_REPO.git
+          git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GIT_USER: ryanhomer
-          GIT_EMAIL: ryan@murage.ca
-          GIT_REPO: cruud-connector
       - name: Install JS dependencies
         run: yarn --frozen-lockfile
       - name: Build and publish docs
