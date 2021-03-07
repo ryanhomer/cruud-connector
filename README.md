@@ -21,6 +21,12 @@ The last layer is the network layer which is specific to the network API or libr
 
 ## Usage
 
+### Installation
+
+```bash
+npm install @techrah/cruud-connector
+```
+
 ### Create a Connector
 
 ```typescript
