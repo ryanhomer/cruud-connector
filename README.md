@@ -2,6 +2,8 @@
 
 A Javascript library for a layered approach to accessing REST API endpoints.
 
+![publish workflow status badge](https://github.com/ryanhomer/cruud-connector/workflows/publish/badge.svg?branch=master) ![codecov](https://codecov.io/gh/ryanhomer/cruud-connector/branch/master/graph/badge.svg?token=BN7T3PAMXF)
+
 - No external package dependencies
 - Total size of distribution JS files about 50K
 - Fully typed with TypeScript&trade;
