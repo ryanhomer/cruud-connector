@@ -21,6 +21,11 @@
     "package.json",
     "dist"
   ],
+  "keywords": [
+    "api",
+    "crud",
+    "rest"
+  ],
   "license": "MIT",
   "main": "dist/index.min.js",
   "name": "@techrah/cruud-connector",
