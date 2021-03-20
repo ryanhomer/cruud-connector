@@ -32,7 +32,7 @@
     "build:docs": "typedoc",
     "publish:docs": "gh-pages -d docs",
     "test": "jest",
-    "testcov": "jest --coverage && codecov"
+    "testcov": "tsc --noEmit && jest --coverage && codecov --disable=gcov"
   },
   "types": "dist/index.d.ts",
   "version": "1.0.6"
