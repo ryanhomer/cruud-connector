@@ -13,7 +13,7 @@ jobs:
       - name: Install node
         uses: actions/setup-node@v2
         with:
-          node-version: 12.x
+          node-version: 14.16.0
           registry-url: https://registry.npmjs.org/
 
       - run: git config --global init.defaultBranch master
@@ -24,8 +24,5 @@ jobs:
       - name: Install JS dependencies
         run: yarn --frozen-lockfile
 
-      - name: Build package
-        run: yarn build --noEmit
-
-      - name: Run tests
-        run: yarn test --coverage
+      - name: Build package and run tests with coverage
+        run: yarn testcov
