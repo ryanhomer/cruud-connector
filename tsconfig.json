@@ -4,14 +4,14 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "lib": ["dom", "es2019"],
-    "module": "commonjs",
-    "outDir": "dist",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "outDir": "tmp",
     "rootDir": "src",
     "skipLibCheck": false,
-    "strict": true,
-    "target": "es5"
+    "strict": true
   },
-  "exclude": ["dist", "node_modules", "*.ts", "**/*.test.*"],
+  "exclude": ["docs", "dist", "node_modules", "tmp", "*.ts", "**/*.test.*"],
   "typedocOptions": {
     "entryPoints": ["src/index.ts"],
     "hideGenerator": true,
