@@ -21,9 +21,12 @@
     "package.json",
     "dist"
   ],
+  "homepage": "https://ryanhomer.github.io/cruud-connector/",
   "keywords": [
     "api",
+    "connector",
     "crud",
+    "crud-connector",
     "rest"
   ],
   "license": "MIT",
@@ -31,6 +34,10 @@
   "name": "@techrah/cruud-connector",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanhomer/cruud-connector.git"
   },
   "scripts": {
     "build": "tsc --emitDeclarationOnly && rollup -c && rm -r tmp",
