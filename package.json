@@ -21,7 +21,7 @@
     "package.json",
     "dist"
   ],
-  "homepage": "https://ryanhomer.github.io/cruud-connector/",
+  "homepage": "https://techrah.github.io/cruud-connector/",
   "keywords": [
     "api",
     "connector",
@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ryanhomer/cruud-connector.git"
+    "url": "https://github.com/techrah/cruud-connector.git"
   },
   "scripts": {
     "build": "tsc --emitDeclarationOnly && rollup -c && rm -r tmp",
