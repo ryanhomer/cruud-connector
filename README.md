@@ -4,6 +4,7 @@ A Javascript library for a layered approach to accessing REST API endpoints.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![publish workflow status badge](https://github.com/ryanhomer/cruud-connector/workflows/publish/badge.svg?branch=master) ![codecov](https://codecov.io/gh/ryanhomer/cruud-connector/branch/master/graph/badge.svg?token=BN7T3PAMXF)
 
+- UMD format
 - No external package dependencies
 - Total size of distribution file is less than 6K
 - Fully typed with TypeScript&trade;
@@ -166,8 +167,8 @@ function createNetworkConnector(axiosConfig: object = {}): CRUUDFns {
   }
 
   // Create CRUUD functions that do the requests.
-  // Here, they all all identical since axios handles the actual HTTP method
-  // which is specified in the request header.
+  // Here, they all all identical since axios handles the actual
+  // HTTP method which is specified in the request header.
   //
   // The method name is available in case you need to call different
   // request function based on this. Here, we ignore it.
