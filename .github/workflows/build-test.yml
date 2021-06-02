@@ -24,5 +24,5 @@ jobs:
       - name: Install JS dependencies
         run: yarn --frozen-lockfile
 
-      - name: Build package and run tests with coverage
-        run: yarn testcov
+      - name: Run tests and verify docs can be built
+        run: yarn testcov && yarn build:docs
