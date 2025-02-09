@@ -4,10 +4,9 @@ import {
   CRUUDMethod,
   CRUUDMiddleWareFn,
   CRUUDRequest,
+  HttpMethod,
 } from "../types";
 import { createCruudFns } from "../util";
-
-type HttpMethod = "DELETE" | "GET" | "POST" | "PATCH" | "PUT";
 
 interface CRUUDMapper {
   create?: HttpMethod;
@@ -54,9 +53,10 @@ export function cruudMapper(customMap: CRUUDMapper = {}): CRUUDMiddleWareFn {
   };
 
   return function mwMapper(next: CRUUDFns): CRUUDFns {
-    const createConnFn = (methodName: CRUUDMethod): CRUUDConnectorFn => (
-      req = {},
-    ) => next[methodName](getRequest(req, methodName));
+    const createConnFn =
+      (methodName: CRUUDMethod): CRUUDConnectorFn =>
+      (req = {}) =>
+        next[methodName](getRequest(req, methodName));
     return createCruudFns(createConnFn);
   };
 }

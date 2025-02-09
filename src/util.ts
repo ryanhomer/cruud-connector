@@ -1,7 +1,9 @@
 import { CRUUD_METHODS, HTTP_METHODS } from "./constants";
 import { CRUUDConnectorFn, CRUUDFns, CRUUDMethod, CRUUDRequest } from "./types";
 
-type CRUUDConnectorFnCreator = (methodName: CRUUDMethod) => CRUUDConnectorFn;
+export type CRUUDConnectorFnCreator = (
+  methodName: CRUUDMethod,
+) => CRUUDConnectorFn;
 
 /**
  * A helper function to generate CRUUD functions that are returned

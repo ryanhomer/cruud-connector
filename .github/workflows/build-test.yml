@@ -25,4 +25,4 @@ jobs:
         run: yarn --frozen-lockfile
 
       - name: Run tests and verify docs can be built
-        run: yarn testcov && yarn build:docs
+        run: yarn test && yarn build:docs
