@@ -1,8 +1,8 @@
 # CRUUD Connector
 
-A Javascript library for a layered approach to accessing REST API endpoints.
+A TypeScript library for a layered approach to accessing REST API endpoints.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![publish workflow status badge](https://github.com/ryanhomer/cruud-connector/workflows/publish/badge.svg?branch=master) ![codecov](https://codecov.io/gh/ryanhomer/cruud-connector/branch/master/graph/badge.svg?token=BN7T3PAMXF)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![publish workflow status badge](https://github.com/techrah/cruud-connector/workflows/publish/badge.svg?branch=master) ![codecov](https://codecov.io/gh/techrah/cruud-connector/branch/master/graph/badge.svg?token=BN7T3PAMXF)
 
 - UMD format
 - No external package dependencies

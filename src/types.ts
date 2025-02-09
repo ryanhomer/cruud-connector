@@ -4,7 +4,7 @@
 
 export type CRUUDMethod = "create" | "read" | "modify" | "replace" | "delete";
 
-type HttpMethod = "GET" | "DELETE" | "PATCH" | "POST" | "PUT";
+export type HttpMethod = "GET" | "DELETE" | "PATCH" | "POST" | "PUT";
 
 export type CRUUDRequest = {
   headers?: { [key: string]: string };

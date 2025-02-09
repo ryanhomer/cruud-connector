@@ -8,7 +8,7 @@ const addDataToResponse = (res: Response): Promise<CRUUDResponse> =>
     resolve({ ...res, data });
   });
 
-type FetchConfig = {
+export type FetchConfig = {
   baseURL: string;
   headers?: {
     [key: string]: string;
