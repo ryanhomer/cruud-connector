@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Install node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 14.16.0
+          node-version: 18
           registry-url: https://registry.npmjs.org/
 
       - run: git config --global init.defaultBranch master
