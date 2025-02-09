@@ -43,10 +43,10 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # - name: Build and publish docs
-      #   run: |
-      #     yarn build:docs
-      #     yarn publish:docs
+      - name: Build and publish docs
+        run: |
+          yarn build:docs
+          yarn publish:docs
 
       - name: Upload coverage
         uses: codecov/codecov-action@v3
