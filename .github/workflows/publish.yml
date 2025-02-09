@@ -2,8 +2,7 @@ name: publish
 
 on:
   push:
-    branches:
-      - "**" # matches every branch
+    branches: [master]
 
 jobs:
   build:
