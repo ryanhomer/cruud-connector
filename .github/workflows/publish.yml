@@ -31,7 +31,7 @@ jobs:
           yarn test:coverage
 
       - name: Automated Version Bump
-        uses: "phips28/gh-action-bump-version@v8.1.0"
+        uses: "phips28/gh-action-bump-version@v11.0.7"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
